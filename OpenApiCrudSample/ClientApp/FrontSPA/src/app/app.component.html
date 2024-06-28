@@ -1,0 +1,12 @@
+<h2>{{ title }}</h2>
+<button (click)="addWeatherHandle()">
+  Add new record
+</button>
+<ul>
+  <li *ngFor="let weather of weatherForecasts" style="padding-bottom: 5px">
+    {{ weather.summary }} - {{ weather.date }} - ({{ weather.temperatureC }} C)
+    <button (click)="removeWeatherHandler(weather.id)" style="margin-left: 10px">
+      Delete
+    </button>
+  </li>
+</ul>
